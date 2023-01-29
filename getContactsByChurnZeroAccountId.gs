@@ -7,7 +7,7 @@ function getContactsByChurnZeroAccountId(czAccountId, nextLink) {
 	} else {
 		var filter = "$filter=" + encodeURIComponent("AccountId eq " + czAccountId + " and FirstName ne null and LastName ne null and Email ne ''");
 		var params = [filter, "$count=true", "$orderby=ObjectCreatedDate%20desc"].join("&").toString();
-		baseUrl = 'https://brazen.us1app.churnzero.net/public/v1/Contact?' + params;
+		baseUrl = 'https://xyz.us1app.churnzero.net/public/v1/Contact?' + params;
 	}
 	var token = Utilities.base64Encode(config.userName + ':' + config.apiKey);
 	var headers = {
