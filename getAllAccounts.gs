@@ -5,7 +5,7 @@ function getAllAccounts(nextLink){
     baseUrl = nextLink;
   }
   else{
-    baseUrl = 'https://xyz.us1app.churnzero.net/public/v1/Account?$select=ExternalId,CrmId';
+    baseUrl = 'https://' + config.companyDomain + '.us1app.churnzero.net/public/v1/Account?$select=ExternalId,CrmId';
   }
   var token = Utilities.base64Encode(config.userName + ':' + config.apiKey);
   var headers = {
