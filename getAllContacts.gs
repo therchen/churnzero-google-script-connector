@@ -5,7 +5,7 @@ function getAllContacts(nextLink){
     baseUrl = nextLink;
   }
   else{
-    baseUrl = 'https://xyz.us1app.churnzero.net/public/v1/Contact?$orderby=ObjectCreatedDate%20desc&$count=true';
+    baseUrl = 'https://' + config.companyDomain + '.us1app.churnzero.net/public/v1/Contact?$orderby=ObjectCreatedDate%20desc&$count=true';
     //&$top=10
   }
   var token = Utilities.base64Encode(config.userName + ':' + config.apiKey);
